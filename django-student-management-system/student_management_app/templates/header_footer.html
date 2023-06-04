@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main_style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    {% comment %} <script type="text/javascript" src="{% static 'stylejava.js' %}">   {% endcomment %}
+    {% comment %} <script type="text/javascript" src="gallery.js"></script> {% endcomment %}
+    
+    {% block css %}
+    {% block css_gallery %}{% endblock css_gallery %}
+    {% block css_contact %}{% endblock css_contact %}
+    {% endblock css %}
+
+</head>
+<body>
+    <section class="head">
+        <div class="container flex1"> 
+          <div class="scoial">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@SJCBengaluru"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="logo">
+            <img src="{% static 'SJUHLogo.jpg' %}">
+          </div>
+          <div class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            <span> 36 Lalbagh Road, Bangalore,   Karnataka,560027</span>
+          </div>
+        </div>
+      </section>
+      <!-- header2 -->
+      <header class="header">
+        <div class="container">
+          <nav class="navbar flex1">
+            <div class="sticky_logo logo">
+              <a href="http://127.0.0.1:8000/"><img src="{% static 'SJUHEmblemTrans_NEW.png' %}"></a>
+            </div>
+            <ul class="nav-menu">
+              <li> <a href="http://127.0.0.1:8000/">Home</a> </li>
+              <li> <a href="gallery" >gallery</a> </li>
+              <li> <a href="apply">apply</a> </li>
+              <li> <a href="loginportal">login</a> </li>
+              <li> <a href="testimonials">testimonials</a></li>
+              <li> <a href="contact">contact us</a> </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+    
+            <div class="head_contact">
+              <i class="fas fa-phone-volume"></i>
+              <span>080 2227 4079</span>
+            </div>
+          </nav>
+        </div>
+      </header>
+      {% comment %} javascript for header {% endcomment %}
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+    
+        hamburger.addEventListener("click", mobliemmenu);
+    
+        function mobliemmenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        }
+    
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0)
+        })
+      </script>
+
+{% block content %}
+
+{% endblock %}
+
+{% comment %} footer {% endcomment %}
+<footer>
+    <div class="container top">
+      <div class="content grid  top">
+        <div class="box">
+          <div class="logo">
+            <img src="{% static 'SJUHEmblemTrans_NEW.png' %}">
+          </div>
+          <p>St. Joseph's Boy's Hostel College provide Community living, Convenient location, Cost-effective, Supervision, safety, good study environment, and gives access to multiple facilities.</p>
+          <div class="social flex">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>Quick Links</h2>
+          <ul>
+            {% comment %} <li><i class="fas fa-angle-double-right"><a href= "http://127.0.0.1:8000/loginportal">Admin Login</a></i></li> {% endcomment %}
+            <li><i class="fas fa-angle-double-right"></i>Admin Login</li>
+            <li><i class="fas fa-angle-double-right"></i>Student Login</li>
+            <li><i class="fas fa-angle-double-right"></i>Application form</li>
+            <li><i class="fas fa-angle-double-right"></i>Testimonials</li>
+            <li><i class="fas fa-angle-double-right"></i>Announcements</li>
+            <li><i class="fas fa-angle-double-right"></i>Contact us</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Services</h2>
+          <ul>
+            <li><i class="fas fa-angle-double-right"></i>Laundry</li>
+            <li><i class="fas fa-angle-double-right"></i>Mess facility</li>
+            <li><i class="fas fa-angle-double-right"></i>Music and TV Room</li>
+            <li><i class="fas fa-angle-double-right"></i>College campus access</li>
+            <li><i class="fas fa-angle-double-right"></i>Security</li>
+            <li><i class="fas fa-angle-double-right"></i>Peace</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <h3>Address</h3>
+              <p>St. Joseph's College, 36 Lalbagh Road, Bangalore, Karnataka, India 560027</p>
+            </li>
+            <li>
+                <h3>Phone</h3>
+                <p>080 2227 4079</p>
+            </li>
+            <li>
+                <h3>Email</h3>
+                <p>hostelsjch@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

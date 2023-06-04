@@ -1,0 +1,67 @@
+{% comment %} {% extends 'index_mainhomepage.html' %}  {% endcomment %}
+{% load static %}
+
+{% block content %}
+<section class="head">
+    <div class="container flex1">
+      <div class="scoial">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="logo">
+        <img src="{% static 'SJUHLogo.jpg' %}">
+      </div>
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        <span> 36 Lalbagh Road, Bangalore,   Karnataka,560027</span>
+      </div>
+    </div>
+  </section>
+  <!-- header2 -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar flex1">
+        <div class="sticky_logo logo">
+          <img src="{% static 'SJUHEmblemTrans_NEW.png' %}">
+        </div>
+        <ul class="nav-menu">
+          <li> <a href="">Home</a> </li>
+          <li> <a href="gallery" target="_blank">gallery</a> </li>
+          <li> <a href="applydsd.html" target="_blank">apply</a> </li>
+          <li> <a href="">login</a> </li>
+          <li> <a href="Testi.html" target="_blank">testimonials</a></li>
+          <li> <a href="#contact_us">contact us</a> </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="head_contact">
+          <i class="fas fa-phone-volume"></i>
+          <span>080 2227 4079</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  {% comment %} javascript for header {% endcomment %}
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobliemmenu);
+
+    function mobliemmenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+  {% endblock %}

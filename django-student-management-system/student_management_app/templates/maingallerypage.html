@@ -1,0 +1,30 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+  {% block css_gallery %}
+  <link href="{% static 'gallery_hehoo.css' %}" rel="stylesheet">
+  <script src="{% static 'gallery_hahha.js' %}"></script>
+  {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> {% endcomment %}
+  {% endblock  %}
+  {% block content %}
+  <section class="gallery_main">
+    <div class="grid_main">
+        <img src="{% static 'Hpic01.jpg' %}">
+        <img src="{% static 'Hpic02.jpg' %}">
+        <img src="{% static 'Hpic03.jpg' %}">
+        <img src="{% static 'Hpic04.jpg' %}">
+        <img src="{% static 'Hpic05.jpg' %}">
+        <img src="{% static 'Hpic06.jpg' %}">
+        <img src="{% static 'Hpic07.jpg' %}">
+        <img src="{% static 'Hpic08.jpg' %}">
+        <img src="{% static 'Hpic09.jpg' %}">
+        <img src="{% static 'Hpic010.jpg' %}">
+        <img src="{% static 'Hpic011.jpg' %}">
+        <img src="{% static 'Hpic012.jpg' %}">
+        <img src="{% static 'Hpic013.jpg' %}">
+        <img src="{% static 'Hpic014.jpg' %}">
+        <img src="{% static 'Hpic015.jpg' %}">
+        <img src="{% static 'Hpic016.jpg' %}">
+    </div>
+</section>
+  {% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block css_gallery %}
+    <link href="{% static 'apply_m.css' %}" rel="stylesheet">
+{% endblock  %}
+{% block content %}
+
+<div id="home_apply">
+
+    <div>
+        {% comment %} <center>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB-FOQO3JXyTyU5Pt4dGj22H5_-eqm34omMSnsRWeIvXrf-fje__rCjz8tWJxT-lMr2g&usqp=CAU">
+        </center> {% endcomment %}
+    </div>
+    <div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">Hostel Application</label>
+        <div class="tab">
+        <h1>Hostel Application</h1>
+        <p>Rooms available are of the following grades</p>
+        <p> A. Single bed rooms (PG & Final Year Students)</p>
+        <p>B. Two beds rooms (Second Year Students)</p>
+        <p>C. cubicles</p>
+        <p> Each student is provided with a bed, a study table, study chair, and an almirah.</p>
+        <p><b>New admissions are only for first-year students.</b></p>
+        <p>Male students who have secured admission in the college may apply for either hostel through an application form available on the college website. One needs to download it and fill in all the details and<b> EMAIL THE SCANNED COPY OF THIS FORM ALONG WITH THE SCANNED COPY OF COLLEGE FEE PAID RECEIPT TO: hosteladmission2023@sju.edu.in</b> for accommodation in these hostels. Selection is based on merit, geographical location and economic condition of the candidate. A selected candidate will be receiving an e-mail from the Hostel Management for further confirmations.</p>
+        <a href="https://drive.google.com/file/d/1B9iOprfAZ_riox2AvlNqLOJOA8jExqzT/view?usp=share_link" target ="_blank"><button class="b1">Apply</button></a>
+        <a href="https://drive.google.com/file/d/1hGdRc7MHz9aGwMLQSo6coAH1gt4u_PoZ/view?usp=share_link" target ="_blank"><button class="b1">Fees</button></a>
+    </div>
+
+    {% comment %} <input type="radio" name="tabs" id="tabtwo">
+    <label for="tabtwo">Even Sem Hostel Application</label>
+    <div class="tab">
+        <h1>Even Sem Hostel Application</h1>
+        <button class="b1" target="_blank">Apply</button>
+        <button class="b1">Fees</button>
+    </div> {% endcomment %}
+</div>
+{% endblock %}
