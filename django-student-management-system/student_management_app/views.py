@@ -7,7 +7,7 @@ from django.contrib import messages
 from student_management_app.EmailBackEnd import EmailBackEnd
 
 def main_homepage_h(request):
-    return render(request,'index_mainhomepage.html')
+    return render(request,'index.html')
 def header_footer(request):
     return render(request,'header_footer.html')
 def main_gallerypage_h(request):
